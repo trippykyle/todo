@@ -28,7 +28,6 @@ class TasksController < ApplicationController
         format.html { redirect_to tasks_path, notice: "Task was successfully updated." }
       else
         format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @task.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -40,7 +39,7 @@ class TasksController < ApplicationController
         format.html { redirect_to tasks_path, notice: "Task was successfully updated." }
       else
         format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @task.errors, status: :unprocessable_entity }
+        
       end
     end
   end
