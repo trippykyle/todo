@@ -24,7 +24,6 @@ gem "turbo-rails"
 gem "stimulus-rails"
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
-gem "jbuilder"
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
@@ -41,6 +40,10 @@ gem "bootsnap", require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ]
+
+  gem "bootstrap", "~> 5.3"
+
+  gem "sassc-rails", "~> 2.1"
 end
 
 group :development do
@@ -60,6 +63,3 @@ group :test do
   gem "selenium-webdriver"
 end
 
-gem "bootstrap", "~> 5.3"
-
-gem "sassc-rails", "~> 2.1"
