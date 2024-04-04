@@ -1,8 +1,7 @@
 <h3>Editing</h3>
+<%= render "form", task: @task %>
 
-    <%= render "form", task: @task %>
-
-    <br>
+<br>
 
 <div>
     <%= link_to "Tasks", tasks_path, {class: 'btn btn-success btn-sm'} %>
