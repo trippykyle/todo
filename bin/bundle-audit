@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-
+bundle exec bundler-audit --update
 require 'rubygems'
 
 lib_dir = File.expand_path(File.join(File.dirname(__FILE__),'..','lib'))
