@@ -43,7 +43,10 @@ group :development, :test do
 
   gem "bootstrap", "~> 5.3"
 
+  gem "bundler-audit", "~> 0.9.1"
+
   gem "sassc-rails", "~> 2.1"
+
 end
 
 group :development do
@@ -67,6 +70,6 @@ end
 
 gem "pg", "~> 1.5"
 
-gem "bundler-audit", "~> 0.9.1"
+
 
 gem "rubocop", "~> 1.63"
