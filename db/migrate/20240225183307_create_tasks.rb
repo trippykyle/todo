@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # CreateTasks class
 class CreateTasks < ActiveRecord::Migration[7.1]
   def change
