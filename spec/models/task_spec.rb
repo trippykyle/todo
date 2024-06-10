@@ -18,7 +18,7 @@ RSpec.describe Task do
   end
 
   it 'Content should not be too long' do
-    subject.content = 'a' * 30 # rubocop:disable RSpec/NamedSubject
+    subject.content = 'a' * 50 # rubocop:disable RSpec/NamedSubject
     expect(subject).not_to be_valid # rubocop:disable RSpec/PredicateMatcher,RSpec/NamedSubject
   end
 end
