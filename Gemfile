@@ -49,6 +49,10 @@ group :development, :test do
   gem 'bundler-audit', '~> 0.9.1'
 
   gem 'sassc-rails', '~> 2.1'
+
+  gem 'rails-controller-testing'
+
+  gem 'factory_bot_rails'
 end
 
 group :development do
