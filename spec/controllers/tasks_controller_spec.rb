@@ -10,20 +10,28 @@ RSpec.describe TasksController do
     expect(response).to render_template :index
   end
 
-  it "should render new page" do
+  it 'renders new page' do
     get :new
     expect(response).to render_template :new
   end
 
-  it "creates a Task and redirects to the Task" do
-      expect {post :create, params: {task: attributes_for(:task)}}.to change ((Task).count).by (1)
-      post :create, params: {task: attributes_for(:task)}
-      expect(response).to redirect_to(Task.last)
-    end
+  it 'creates a new task' do
+    expect { post :create, params: { task: { content: 'task' } } }.to change(Task, :count).by(1)
+  end
 
-  it "does not create a new task and re-renders the new template" do
-    expect {post :create, params: {task: attributes_for(:task, content: nil)}}.to_not change(Task, :count)
-    post :create, params: {task: attributes_for(:task, content: nil)}
+  it 'redirect to the list of tasks' do
+    post :create, params: { task: { content: 'task' } }
+    expect(response).to redirect_to(Task)
+  end
+
+  it 'does not create a new task' do
+    expect do
+      post :create, params: { task: { content: nil } }
+    end.not_to change(Task, :count)
+  end
+
+  it 're-renders the new template' do
+    post :create, params: { task: { content: nil } }
     expect(response).to render_template(:new)
   end
 end
