@@ -49,6 +49,10 @@ group :development, :test do
   gem 'bundler-audit', '~> 0.9.1'
 
   gem 'sassc-rails', '~> 2.1'
+
+  gem 'rails-controller-testing'
+
+  gem 'factory_bot_rails'
 end
 
 group :development do
@@ -66,6 +70,8 @@ end
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem 'capybara'
+  gem 'rspec', '~> 3.13'
+  gem 'rspec-rails', '~> 6.1'
   gem 'selenium-webdriver'
 end
 gem 'pg', '~> 1.5'
